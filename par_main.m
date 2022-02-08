@@ -56,17 +56,4 @@ end
 toc
 
 %%
-% for i =1:1:length(zdim)
-lambdaA=[0.1 0.00  0.1  00]; % Kt:TV, Wavelet, Vp: TV, wavelet
-
-
-a = lambdaA;
-for i = 1:1:length(zdim)
-% for i = 26
-    [Kt_NN(:,:,i),Vp_NN(:,:,i)] = par_cal_Kt_Vp_NN(imgF0(:,:,i,:),a,R,sigma);
-    
-end
-%
-% cd('Grey_Recon')
-% save('PatC_R20.mat','Kt','Kt_R','Kt_U','Vp','Vp_R','Vp_U','Kt_NN','Vp_NN')
-% cd('..')
+% save('PatC_R20.mat','Kt','Kt_R','Kt_U','Vp','Vp_R','Vp_U')
