@@ -95,9 +95,8 @@ Vp_1 = Vp_U ;
 Vp_2 = Kt_2;
 opt2 = opt;
 opt2.lambdaA= [0 0 0 0];
-% [Kt_L2,Vp_L2,~,~]=Kt_Vp_SEN_org(Kt_2,Vp_2,sMaps,U1,kU,opt2,Kt);
-% % % % tic,
-[Kt_1,Vp_1,~,~]=Kt_Vp_SEN_line_TV(Kt_U,Vp_U,sMaps,U1,kU,opt,Kt,Vp);
+
+[Kt_1,Vp_1,~,~]=Kt_Vp_SEN_line(Kt_U,Vp_U,sMaps,U1,kU,opt,Kt,Vp);
 % % % toc,
 Kt_r1=real(Kt_1);  % get real value after recon
 Vp_r1=real(Vp_1);
