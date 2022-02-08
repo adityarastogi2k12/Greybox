@@ -63,7 +63,7 @@ Kt_z = denoised_Kt(Kt) ;
 % [Kt,f,exitflag,output]=minFunc(@Ktrans2sig_sen_WT,Kt(:),options,sMaps,U1,kU,opt);
 cost_val = zeros(20,2);
 for count=1:1:count_Kt
-    [Kt,cost_val(count,1),cost_val(count,2)]=sd_on_ktrans_search_TV(Kt(:),Kt_z,sMaps,U1,kU,opt,iter,step,beta,omega,opt2);
+    [Kt,cost_val(count,1),cost_val(count,2)]=sd_on_ktrans_search(Kt(:),Kt_z,sMaps,U1,kU,opt,iter,step,beta,omega,opt2);
 %     break;
     temp = 2;
 
@@ -93,7 +93,7 @@ Vp_z = denoised_Vp(Vp) ;
 % find_psnr(Vp_z,Vp_full)
 
 for count=1:1:count_Vp
-    [Vp,cost_val_vp(count,1),cost_val_vp(count,2)]=sd_on_vp_search_TV(Vp(:),Vp_z,sMaps,U1,kU,opt,iter,step,beta,omega,opt2);
+    [Vp,cost_val_vp(count,1),cost_val_vp(count,2)]=sd_on_vp_search(Vp(:),Vp_z,sMaps,U1,kU,opt,iter,step,beta,omega,opt2);
 %     break;
     temp = 2;
 
